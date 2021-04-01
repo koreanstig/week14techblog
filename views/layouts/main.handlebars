@@ -9,22 +9,32 @@
 </head>
 <body>
     <nav id='navbar'>
-        <ul id="nav-ul">
+        <ul id="navbar-ul">
             <li>
-                <p>Home</p>
+                <p><a href="/" class="link">Home</a></p>
+            </li>
+            {{#if loggedIn}}
+            <li>
+                <p><a href="/dashboard" class="link">Dashboard</a></p>
             </li>
             <li>
-                <p>Dashboard</p>
+                <p><button id="logout-btn" class="btn-no-style">Logout</button></p>
             </li>
+            {{else}}
             <li>
-                <p>Logout</p>
+                <p><a href="/login" class="link">Login</a></p>
             </li>
-            <li>
-                <p>Login</p>
-            </li>
+            {{/if}}
         </ul>
 
         <h1 id="nav-header">The Tech Blog</h1>
     </nav>
+
+    {{{ body }}}
+
 </body>
+
+<script src="/js/logout.js"></script>
+<script src="/js/home.js"></script>
+
 </html>
