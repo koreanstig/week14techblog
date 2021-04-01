@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "week14techblog",
+  "description": "This is a CMS-style blog site where you can publish articles, blog posts, and thoughts/opinions on anything tech related",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koreanstig/week14techblog.git"
+  },
+  "author": "David Jung Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koreanstig/week14techblog/issues"
+  },
+  "homepage": "https://github.com/koreanstig/week14techblog#readme"
+}
