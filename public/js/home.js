@@ -1,5 +1,5 @@
-var inactivityTime = function () {
-    var time;
+const idleTime = () => {
+    const time;
     window.onload = resetTimer;
 
     document.onmousemove = resetTimer;
@@ -15,6 +15,6 @@ var inactivityTime = function () {
     }
 };
 
-window.onload = function () {
-    inactivityTime();
+window.onload =  () => {
+    idleTime();
 };
