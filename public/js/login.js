@@ -7,14 +7,9 @@ async function loginFormHandler(e) {
 
     if (username && password) {
         const response = await fetch("/api/users/login", {
-            method: "post",
-            body: JSON.stringify({
-                username,
-                password,
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            },
+            method: "POST",
+            body: JSON.stringify({ username, password, }),
+            headers: { "Content-Type": "application/json" },
         });
 
         if (response.ok) {
@@ -34,36 +29,14 @@ async function signupFormHandler(e) {
    
     if (username && password) {
         const response = await fetch("/api/users", {
-            method: "post",
-            body: JSON.stringify({
-                username,
-                password,
-            }),
-            headers: {
-                "Content-Type": "application/json"
+            method: "POST",
+            body: JSON.stringify({ username, password, }),
+            headers: { "Content-Type": "application/json"
             },
         });
 
         if (response.ok) {
             console.log(response);
-        } else {
-            alert(response.statusText);
-        }
-
-        const responseTwo = await fetch("/api/users/login", {
-            method: "post",
-            body: JSON.stringify({
-                username,
-                password,
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            },
-        });
-
-        if (responseTwo.ok) {
-            console.log(response, "Login successfully!");
-            document.location.replace("/");
         } else {
             alert(response.statusText);
         }
