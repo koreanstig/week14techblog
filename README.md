@@ -11,7 +11,10 @@
 This is a CMS-style blog site where you can publish articles, blog posts, and thoughts/opinions on anything tech related
 
 ## Installation
-* Enter "npm install" in command shell
+* In the command line run "mysql -u root -p" to initialize mySql
+* Enter mySql password
+* Enter "source db/schema.sql" to run schema
+* Enter "quit" to exit mySql
 * Enter "node server.js" or "npm start" to start server
 
 
