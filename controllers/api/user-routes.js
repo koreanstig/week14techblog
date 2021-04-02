@@ -18,7 +18,6 @@ router.get("/", (req, res) => {
         }).then((dbUserData) => {
             res.json(dbUserData);
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
@@ -49,7 +48,6 @@ router.get("/:id", (req, res) => {
             }
             res.json(dbUserData);
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
@@ -79,8 +77,7 @@ router.post("/login", (req, res) => {
             where: {
                 email: req.body.email,
             },
-        })
-        .then((dbUserData) => {
+        }).then((dbUserData) => {
 
             if (!dbUserData) {
                 res.status(400).json({
@@ -108,9 +105,7 @@ router.post("/login", (req, res) => {
                     message: "You are now logged in!"
                 });
             });
-        })
-        .catch((err) => {
-            console.log(err);
+        }).catch((err) => {
             res.status(500).json(err);
         });
 });
@@ -134,7 +129,6 @@ router.delete("/:id", (req, res) => {
             }
             res.json(dbUserData);
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });

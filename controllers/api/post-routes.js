@@ -13,7 +13,6 @@ router.get("/", (req, res) => {
             res.json(dbPostData);
 
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
@@ -39,7 +38,6 @@ router.get("/:id", (req, res) => {
             }
             res.json(dbPostData);
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
@@ -53,13 +51,11 @@ router.post("/", (req, res) => {
         }).then((dbPostData) => {
             res.json(dbPostData);
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err); 
         });
 });
 
 router.put("/:id", (req, res) => {
-    console.log("The id is ", req.params.id);
     Post.update({
             title: req.body.title,
             body: req.body.body,
@@ -76,7 +72,6 @@ router.put("/:id", (req, res) => {
             }
             res.json(dbPostData);
         }).catch((err) => {
-            console.log(err);
             res.json(err);
         });
 });
@@ -96,7 +91,6 @@ router.delete("/:id", (req, res) => {
             res.json(dbPostData);
 
         }).catch((err) => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
